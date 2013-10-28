@@ -48,6 +48,14 @@ void InitDevices()
   }
 }
 
+boolean areArrayEqual(byte arr1[], byte arr2[], int length) {
+	for (int a=0; a<length; a++){
+		if (arr1[a] != arr2[a])
+			return false;
+	}
+	return true;
+}
+
 String GetAddress(DeviceAddress deviceAddress)
 {
   String s = "";
@@ -94,7 +102,7 @@ void printData(DeviceAddress deviceAddress)
 void pushDataToWire(DeviceAddress deviceAddress)
 {
   float tempC = sensors.getTempC(deviceAddress);
-  
+
   if (tempC > -70 && tempC < 70)
   {
     SmartWire.initEvent();

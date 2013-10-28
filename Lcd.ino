@@ -39,7 +39,7 @@ void writeInfoToLcd()
     lcd.print("HEAT");
     lcd.setCursor(5,0);
     lcd.print("12345678");
-    for (int a=0; a<SWITCH_COUNT+1; a++)
+    for (int a=0; a<sensorsCount+1; a++)
     {
         lcd.setCursor(5+a,1);
         lcd.print(switchState[a]);
@@ -69,22 +69,22 @@ void writeInfoToLcd()
 
 void lcdDateTime()
 {
-  // digital clock display of the time
-  lcd.setCursor(0,0); 
-  lcd.print(year());
-  lcd.setCursor(4,0); 
-  lcd.print('-');
-  lcd.setCursor(5,0); 
-  lcd.print(month());
-  lcd.setCursor(7,0); 
-  lcd.print('-');
-  lcd.setCursor(8,0); 
-  lcd.print(day());
-  lcd.setCursor(11,0); 
-  lcd.print(hour());
-  lcd.setCursor(13,0); 
-  lcd.print(':');
-  lcd.setCursor(14,0); 
-  lcd.print(minute());
+	// digital clock display of the time
+	lcd.setCursor(0,0); 
+	lcd.print(now.year());
+	lcd.setCursor(4,0); 
+	lcd.print('-');
+	lcd.setCursor(5,0); 
+	lcd.print(now.month());
+	lcd.setCursor(7,0); 
+	lcd.print('-');
+	lcd.setCursor(8,0); 
+	lcd.print(now.day());
+	lcd.setCursor(11,0); 
+	lcd.print(now.hour());
+	lcd.setCursor(13,0); 
+	lcd.print(':');
+	lcd.setCursor(14,0); 
+	lcd.print(now.minute());
 }
 

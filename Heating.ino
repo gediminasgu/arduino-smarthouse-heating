@@ -1,6 +1,6 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
-#include <Wire.h>
+#include <WSWire.h>
 #include <SmartWire.h>
 #include <RTClib.h>
 
